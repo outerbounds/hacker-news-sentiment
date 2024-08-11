@@ -1,0 +1,123 @@
+<!doctype html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <link rel="icon" type="image/x-icon" href="/favicon.ico" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    
+    <style>
+        body {
+            font-family: sans-serif;
+            font-weight: 400;
+        }
+        .ag-column-first{
+            font-weight: 600;            
+            color: #222;
+        }
+        input {
+          font-size: 14px;
+          padding: 0.375em 0.75em 0.375em 2.4em;
+          line-height: 1.4;
+          border-radius: 6px;
+          border: 1px solid #666;
+          background-color: transparent;
+          outline: none;
+          width: 20em;
+          margin-bottom: 20px;
+        }
+        * {
+            box-sizing: border-box;
+        }
+        .row {
+            display: flex;
+        }
+
+        .col {
+            float: left;
+        }
+        .left {
+            width: 60%;
+        }
+        .right {
+            padding-left: 20px;
+            width: 40%;
+            margin-top: 5px;
+            color: #333;
+            font-size: 12px;
+        }
+        .right h1 {
+            font-size: 16px;
+        }
+        .right h2 {
+            font-size: 14px;
+            margin-left: 10px;
+            padding-top: 10px;
+            color: #666;
+        }
+        #happy {
+            border-radius: 6px;
+            height: 150px;
+            background-color: #daeaf2;
+        }
+         #angry {
+            border-radius: 6px;
+            height: 150px;
+            background-color: #f8c1c0;
+        }
+        .row:after {
+            content: '';
+            display: table;
+            clear: both;
+        }
+        .link {
+            text-overflow: ellipsis;
+            white-space: nowrap;
+            overflow: hidden;
+            max-width: 350px;
+        }
+        a {
+            text-decoration: none;
+            color: #5474a5;
+        }
+        .score {
+            padding-left: 10px;
+            font-weight: bold;
+        }
+        .right table {
+        }
+    </style>
+  </head>
+  <body>
+
+    <div class="wrapper" style='width: 100%;'>
+        <div class="container">
+            <input
+                type="text"
+                id="filter-text-box"
+                placeholder="Search product..."
+            />
+        </div>
+        <div class="panel">
+            <div class="col left">
+                <div class="ag-theme-quartz grid">
+                      <div id="app" style="height: 400px;"></div>
+                </div>
+            </div>
+            <div class="col right">
+                <h1 id='topictitle'>⬅️ Mouse over to choose a topic</h1>
+                <div id='happy'>
+                <h2>Positive posts</h2>
+                <table id="happy_table"></table>
+                </div>
+                <div id='angry'>
+                <h2>Negative posts</h2>
+                <table id="angry_table"></table>
+                </div>
+            </div>
+        </div>
+    </div>
+    <script type="module" src="/src/main.ts"></script>
+
+</body>
+
+</html>
