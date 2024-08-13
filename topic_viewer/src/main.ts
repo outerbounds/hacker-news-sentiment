@@ -40,7 +40,7 @@ const columnDefs: ColDef[] = [
     //  innerRenderer: ProductCellRenderer,
     //},
     //minWidth: 300,
-        width: 400,
+        width: 350,
         resizable: true
     },
     {
